@@ -1,0 +1,19 @@
+{
+  "name": "hello-it-test",
+  "version": "1.0.0",
+  "description": "깃허브를 사용해보자\r VSC를 사용해보자",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerosial/Hello-IT-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerosial/Hello-IT-test/issues"
+  },
+  "homepage": "https://github.com/zerosial/Hello-IT-test#readme"
+}
