@@ -1,8 +1,8 @@
-console.log('hello world')
+var coworkers = {
+  "programmer": "egoing",
+  "designer": "leezche"
+};
 
-fruits = ["apple", "banana", "coconut"];
-var i = 0;
-while (i < 3) {
-  document.write('<li>'+fruits[i]+'</li>');
-  i = i + 1;
+for(var key in coworkers) {
+  document.write(coworkers[key]+'<br>');
 }
