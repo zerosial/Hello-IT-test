@@ -1,94 +1,97 @@
 /*
 
-  < Logical operators basic 1 >
+  < Conditional statements basic 1 >
 
   💬 를 적절한 값으로 고쳐주세요!
-  seven -> true
-  tof -> false
-  and -> false
-
 
 */
 
-const seven = 7;
-const trueOrFalse = !!"";
+let num = 3;
+let result = null;
 
-const result = (seven && trueOrFalse);
+if (num < 0) {
+  result = "Positive";
+} else {
+  result = "Negative";
+}
 
-if (result === false) {
+if (result === "Negative") {
+  alert("🎉");
+}
+
+/*
+
+  < Conditional statements basic 2 >
+
+  💬 를 적절한 값으로 고쳐주세요!
+
+*/
+
+let alphabet = "B";
+let result = null;
+
+if (alphabet === "A") {
+  result = "I am A";
+} else if (alphabet === "B") {
+  result = "I am B";
+} else {
+  result = "I am nothing";
+}
+
+if (result === "I am B") {
   alert("🎉");
 }
 
 
 /*
 
-  < Logical operators basic 2 >
+  < Conditional statements basic 3 >
 
   💬 를 적절한 값으로 고쳐주세요!
-  empty = false
-  tof = true (0은 false에서 !반환은 true로 변경)
-  str = true
-  or -> true
 
 */
 
-const empty = null;
-const trueOrFalse = !0;
-const str = "Vanillacoding";
+const zero = 0;                     //false
+const empty = "";                   //false
+const trueOrFalse = !!undefined;    //false의 !!라서 false
+const vaco = "Vanillacoding";       //문자열 trye
+let result = null;                  //false
 
-const result = (empty || trueOrFalse || str);
+if (zero) {
+  result = "I am zero";
+} else if (empty) {
+  result = "I am empty";
+} else if (trueOrFalse) {
+  result = "I am trueOrFalse";
+} else if (vaco) {
+  result = "I am vaco";
+} else {
+  result = "I am nothing";
+}
 
-if (result === true) {
+if (result === "I am vaco") {
   alert("🎉");
 }
 
 /*
 
-  < Logical operators basic 3 >
+  스테이크의 내부 온도에 따라 굽기 정도를 알 수 있다고 합니다.
 
-  💬 를 적절한 값으로 고쳐주세요!
-  tof -> true
-  zero -> false
-  str -> true
-  &&(and)의 경우 첫 false의 값을 산출 (없으면 최종값) -> 곱하기 같은 기분
-  ||(or))의 경우 첫 true의 값을 산출 (없으면 최종값) -> 덧셈같은 기분
-  ||(덧셈)먼저 하고 &&연산  
+  Medium으로 구워질 수 있도록 💬 를 적절한 값으로 고쳐주세요!
 
+  57~69도 = Medium
+  55도 이하 = rare
+  70도 이상 = 웰던
+  56도는 =가 없어서 웰던으로 표시됨
 
 */
 
-const trueOrFalse = !null;
-const zero = 0;
-const str = "Vanillacoding";
+let temperature = 57;
 
-const result = (trueOrFalse && zero && str);
-
-if (result === 0) {
-  alert("🎉");
-}
-
-
-/*
-
-  Ken은 토론회에 참석하였습니다.
-
-  두 가지 의견의 토론 결과는 logical operator에 따라 결정됩니다.
-
-  토론의 최종 결과가 truthy 값이 되도록 💬 를 적절한 값으로 고쳐주세요!
-
-  (Ryan || Blake) -> true
-  (Scott && Ken) -> false
-  따라서 &&로는 안되고 ||만 가능
-
-*/
-
-const Ryan = false;
-const Blake = true;
-const Scott = false;
-const Ken = true;
-
-const result = (Ryan || Blake) || (Scott && Ken);
-
-if (result) {
-  alert("🎉");
+if (temperature <= 55) {
+  alert("Rare 🎃");
+} else if (temperature > 56 && temperature < 70) {
+  alert("Medium 🎉");
+} else {
+  alert("Well Done 🎃");
 }

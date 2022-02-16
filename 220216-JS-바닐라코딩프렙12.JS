@@ -1,88 +1,82 @@
 /*
 
-  < Types basic 1 >
+  < Loops basic 1 >
 
   💬 를 적절한 값으로 고쳐주세요!
-  공백도 단어의 한종류
+
+  console.log(slogan[0]);
+  console.log(slogan[1]);
+  console.log(slogan[2]);
+  console.log(slogan[3]);
+  console.log(slogan[4]);
+  console.log(slogan[5]);
+  ...
+  ...
+  ...
+  console.log(slogan[20]);
+  console.log(slogan[21]);
+  console.log(slogan[22]);
 
 */
 
-const empty = "";
+const slogan = "Progress Not Perfection";
 
-const result = typeof empty;
-
-if (result === "string") {
-  alert("🎉");
+for (let i = 0; i < slogan.length; i++) {
+  console.log(slogan[i]);
 }
 
-/*
-
-  < Types basic 2 >
-
-  💬 를 적절한 값으로 고쳐주세요!
-  첫 함수는 undefined
-
-*/
-
-let empty;
-
-const result = typeof empty;
-
-if (result === "undefined") {
-  alert("🎉");
-}
+alert("🎉");
 
 
 /*
 
-  < Types basic 3 >
+  < Breaking out of the loop >
 
-  💬 를 적절한 값으로 고쳐주세요!
-  isNAN -> 숫자일경우 false / 비숫자는 true 
+  바닐라코딩의 슬로건에서 문자 n을 찾아내려고 합니다.
+
+  n을 발견하면 반복문을 멈춰주기 위해 💬 를 적절한 값으로 고쳐주세요!
 
 */
 
-const num = 3;
+const slogan = "Progress, not perfection";
+let result = null;
 
-const result = isNaN(num);
+for (let i = 0; i < slogan.length; i++) {
+  result = slogan[i];
 
-if (result === false) {
+  if (slogan[i] === "n") {
+    break;
+  }
+}
+
+if (result === "n") {
   alert("🎉");
 }
 
+
 /*
 
-  < Types basic 4 >
+  < Skipping the for loop >
+
+  이번에는 n, o, t 가 나오면 반복문 실행을 건너뛰어서
+
+  결과에 추가되지 않도록 하려고 합니다.
 
   💬 를 적절한 값으로 고쳐주세요!
-  넘버 안이 숫자가 아님 = nan = isnan에서 true 리턴
 
 */
 
-const numberABC = Number("ABC");
+const slogan = "Progress, not perfection";
+let result = "";
 
-const result = isNaN(numberABC);
+for (let i = 0; i < slogan.length; i++) {
+  if (slogan[i] === "n" || slogan[i] === "o" || slogan[i] === "t") {
+    continue;
+  }
 
-if (result === true) {
-  alert("🎉");
+  result += slogan[i];
 }
 
-/*
-
-  < Types basic 5 >
-
-  💬 를 적절한 값으로 고쳐주세요!
-  ten1 -> number
-  ten2 -> string
-  ten1 === ten2 -> false
-
-*/
-
-const ten1 = 10;
-const ten2 = "10";
-
-const result = ((typeof ten1) === (typeof ten2));
-
-if (result === false) {
+if (result === "Prgress,  perfeci") {
   alert("🎉");
 }
