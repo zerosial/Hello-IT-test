@@ -1,136 +1,112 @@
 /*
 
-  < Function basic 1 >
+  < Arrays basic 1 >
 
 	💬 를 적절한 값으로 고쳐주세요!
 
 */
 
-function sayHello(name) {
-  return `Hello, ${name}`;
-}
+const fruitList = ["Apple", "Lemon", "Banana", "Melon"];
+const fruitLength = fruitList.length;
 
-const result = sayHello("Jett");
-
-if (result === "Hello, Jett") {
-	alert("🎉");
-}
-
-/*
-
-  < Function basic 2 >
-
-	💬 를 적절한 값으로 고쳐주세요!
-
-*/
-
-function greetingMaker(greet, name) {
-  return `${greet}, ${name}`;
-}
-
-const hello = greetingMaker("Hello", "Jett");
-const goodBye = greetingMaker("Goodbye", "Justin");
-
-const result = (hello === "Hello, Jett") && (goodBye === "Goodbye, Justin");
-
-if (result) {
-	alert("🎉");
-}
-
-
-/*
-
-  < Function basic 3 >
-
-	💬 를 적절한 값으로 고쳐주세요!
-
-*/
-
-function findStaff(name) {
-  if (name === "Jett") {
-    return "Staff";
-  }
-
-  if (name === "Leo") {
-    return "Staff";
-  }
-
-  return "Spy";
-}
-
-const isFound1 = findStaff("Leo");
-const isFound2 = findStaff("Jett");
-
-const result = (isFound1 === isFound2);
-
-if (result === true) {
-	alert("🎉");
-}
-
-
-/*
-
-  < Making Hamburger with Functions >
-
-  햄버거를 만들어 먹으려고 합니다. 현재는 토마토가 빠져있네요 🍅
-
-  완성된 햄버거와 동일하도록 💬 를 적절한 내용으로 고쳐주세요!
-
-*/
-
-let myBurger = "Hamburger";
-
-const addCheese = function (burger) {
-  const cheese = " with Cheese";
-
-  return burger + cheese;
-};
-
-const addPatty = function (burger) {
-  const patty = " with Patty";
-
-  return burger + patty;
-};
-
-const addTomato = function (burger) {
-  const tomato = " and Tomato";
-
-  return burger + tomato;
-};
-
-myBurger = addCheese(myBurger);
-myBurger = addPatty(myBurger);
-myBurger = addTomato(myBurger);
-
-if (myBurger === "Hamburger with Cheese with Patty and Tomato") {
+if (fruitLength === 4) {
   alert("🎉");
 }
 
 
 /*
 
-  < Simple subtraction function >
-  
-  두 가지 인자를 받아 큰 수에서 작은 수를 빼주는 함수를 작성해주려고 합니다. 
+  < Arrays basic 2 >
 
-  아래 조건이 통과할 수 있도록 💬 를 적절한 내용으로 고쳐주세요!
+	💬 를 적절한 값으로 고쳐주세요!
 
 */
 
-const subtraction = function subtraction(a, b){
-  if (a > b){
-    return a - b;
-  }
-  else {
-    return b - a;
+const foodList = ["Pizza", "Hamburger", "Chicken", "Steak"];
+
+const food1 = foodList[0];
+const food2 = foodList[foodList.length - 1];
+
+const result = food1 + food2;
+
+if (result === "PizzaSteak") {
+  alert("🎉");
+}
+
+
+/*
+
+  < Arrays basic 3 >
+
+	💬 를 적절한 값으로 고쳐주세요!
+
+*/
+
+
+const fruitList = ["Apple"];
+
+fruitList.push("Lemon"); // 반환값 2 (전체의 길이)
+fruitList.push("Mango"); // 반환값 3 (전체의 길이)
+
+const fruit1 = fruitList[1]; // 반환값 2번째 요소 Lemon
+const fruit2 = fruitList.pop(); // 반환값 마지막 요소 Mango
+
+const result = fruit1 + fruit2;
+
+if (result === "LemonMango") {
+  alert("🎉");
+}
+
+/*
+
+  < Arrays basic 4 >
+
+	💬 를 적절한 값으로 고쳐주세요!
+
+*/
+
+const animalList = ["Dog", "Cat", "Lion", "Koala"];
+let result = "";
+
+for (let i = 0; i < animalList.length; i++) {
+  result += animalList[i];
+}
+
+if (result === "DogCatLionKoala") {
+  alert("🎉");
+}
+
+
+/*
+
+  음료 자판기(machine)에 4가지 종류의 음료 중에 "Sprite"가 빠져있네요
+
+  창고(storage)에서 부족한 음료의 종류를 찾아 자판기의 마지막 요소로 채워질 수 있도록
+
+  💬 를 적절한 값으로 고쳐주세요!
+
+*/
+
+const machine = ["Coke", "Pepsi", "Fanta"];
+const storage = ["Pepsi", "Coke", "Sprite", "Fanta"];
+
+for (let i = 0; i < storage.length; i++) {
+  if (machine.indexOf(storage[i]) === - 1) {
+    machine.push(storage[i]);
   }
 }
 
-const sum1 = subtraction(10, 3);
-const sum2 = subtraction(7, 12);
+/*
+machine의 Coke -> 0 / Pepsi -> 1 / Fanta -> 2
+machine.indexOf(storage[0]) -> Pepsi 검색 -> 1 리턴
+machine.indexOf(storage[1]) -> Coke 검색 -> 0 리턴
+machine.indexOf(storage[2]) -> Sprite 검색 -> 결과값 없음 -> -1 리턴
+machine.indexOf(storage[3]) -> Fanta 검색 -> 2 리턴
+-1 리턴시 machine.push(storage[2]) 를 실행하여 Fanta 요소 삽입 , 반환값은 4 (전체의 길이)
+*/
 
-const result = sum1 + sum2;
+const result =  machine[machine.length - 1];
 
-if (result === 12) {
-	alert("🎉");
+if (result === "Sprite") {
+  alert("🎉");
 }
