@@ -1,12 +1,8 @@
-function repeatVaco(n) {
-  var result = ''
-  for (var i = 0; i < n; i++){
-    if(i%2 === 0)
-      result = result + '바'
-    else
-      result = result + '코'
-  }
-  return result
-}
-
-  console.log(repeatVaco(3))
+var result = {};
+var a;
+var arr1 = ["Jett", "Ken"];
+var arr2 = [30, 40];
+a = arr1[0];
+b = arr2[0];
+result[arr1[0]] = arr2[0];
+console.log(result);
