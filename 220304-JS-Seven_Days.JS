@@ -13,7 +13,7 @@
   +---------------------------------------------+
    
   HTML
-  
+
   <table>
   <thead>
     <tr>
@@ -50,13 +50,13 @@ tr6.innerText = days[6];
 // 2안 -> tr의 자식들을 제일 위에부터 카운팅
 const days = ["일", "월", "화", "수", "목", "금", "토"];
 for (var i = 0; i < days.length; i++){
-const $trElement = document.querySelector("tr");
+const trElement = document.querySelector("tr");
 trElement.children[i].innerText = days[i]
 };
 
 // 3안 -> th 항목 전체 선택후 제일 위에부터 카운팅
 const days = ["일", "월", "화", "수", "목", "금", "토"];
 for (let i = 0; i < days.length; i++){
-const $thElement = document.querySelectorAll("th");
-$thElement[i].innerText = days[i]
+const thElement = document.querySelectorAll("th");
+thElement[i].innerText = days[i]
 };

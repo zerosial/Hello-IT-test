@@ -13,7 +13,8 @@
  /* 
 left -> 왼쪽화살표 
 right -> 오른쪽화살표 
-img -> img[0] ~ img[4]
+html에 img[0] 신규추가 (표시화면)
+img -> img[1] ~ img[5]
 dot -> dot[0] ~ dot[4]
 */
 
@@ -36,15 +37,18 @@ left.addEventListener('click', function leftclick(){
   });
 
 right.addEventListener('click', function rightclick(){
-  img[0].setAttribute( 'src', img[i].src );
-  i++;
-  if(i === 7)
+ if (i === 5){
   i = 1;
+  }
+  else{
+  i++;
+  }
+  img[0].setAttribute( 'src', img[i].src );
   });
 
 for (let n = 1; n < 6; n++){
 dot[n-1].addEventListener('click', function dotclick(){
   img[0].setAttribute( 'src', img[n].src );
+  i = n;
 });
-i = n;
 }
