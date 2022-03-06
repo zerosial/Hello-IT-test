@@ -61,17 +61,12 @@ const wrapperElement = document.querySelector(".lightWrapper");
 const redLightElement = wrapperElement.children[0];
 const orangeLightElement = wrapperElement.children[1];
 const greenLightElement = wrapperElement.children[2];
-
-//1안
 redLightElement.style.backgroundColor = "red";
 redLightElement.innerText = "Stop";
 orangeLightElement.style.backgroundColor = "orange";
 orangeLightElement.innerText = "Pause";
 greenLightElement.style.backgroundColor = "green";
-<<<<<<< HEAD
 greenLightElement.innerTextL = "Go";
-=======
-greenLightElement.innerHTML = "Go";
 
 //2안
 redLightElement.classList.add('red');
