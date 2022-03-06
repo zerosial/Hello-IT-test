@@ -61,9 +61,23 @@ const wrapperElement = document.querySelector(".lightWrapper");
 const redLightElement = wrapperElement.children[0];
 const orangeLightElement = wrapperElement.children[1];
 const greenLightElement = wrapperElement.children[2];
+
+//1안
 redLightElement.style.backgroundColor = "red";
 redLightElement.innerText = "Stop";
 orangeLightElement.style.backgroundColor = "orange";
 orangeLightElement.innerText = "Pause";
 greenLightElement.style.backgroundColor = "green";
+<<<<<<< HEAD
 greenLightElement.innerTextL = "Go";
+=======
+greenLightElement.innerHTML = "Go";
+
+//2안
+redLightElement.classList.add('red');
+redLightElement.innerText = "Stop";
+orangeLightElement.classList.add('orange');
+orangeLightElement.innerText = "Pause";
+greenLightElement.classList.add('green');
+greenLightElement.innerText = "Go";
+>>>>>>> 2a9dfc5930acfa37af9f43343b23885dcdb105e2
