@@ -1,0 +1,68 @@
+let clothes = [
+  ["yellowhat", "headgear"],
+  ["bluesunglasses", "eyewear"],
+  ["green_turban", "headgear"],
+];
+let answer = [];
+
+for (let i = 0; i < clothes.length; i++) {
+  answer.push(clothes[i][1]);
+}
+// ["headgear", "eyewear", "headgear"] 로 정렬된다
+
+let countedanswer = answer.reduce(function (allanswer, answer) {
+  if (answer in allanswer) {
+    allanswer[answer]++;
+  } else {
+    allanswer[answer] = 1;
+  }
+  return allanswer;
+}, {});
+
+/*
+countedanswer = 
+{
+  headgear : 2
+  eyewear : 1
+}
+로 표현된다
+*/
+
+let answer2 = Object.values(countedanswer); // [2, 1] 배열로 표시
+let answer3 = 1;
+
+for (let i = 0; i < answer2.length; i++) {
+  answer3 = answer3 * (answer2[i] + 1);
+} // answer 3의 값은 각 옷 +1 만큼을 곱한 값
+
+let finalAnswer = answer3 - 1;
+//최종 값
+
+// 리펙토링
+
+function solution(clothes) {
+  let answer = 1;
+  const obj = {};
+
+  for (let arr of clothes) {
+    if (!obj[arr[1]]) {
+      obj[arr[1]] = 1;
+    } else {
+      obj[arr[1]]++;
+    }
+  }
+
+  /* 값이 없으면 옷 = 1을 집어넣고 값이 있다면 옷을 ++ 한다
+  obj = {
+  headgear : 2
+  eyewear : 1
+  }
+  로 표현된다
+  */
+
+  for (let key in obj) {
+    answer *= obj[key] + 1;
+  } // answer에 2+1 , 1+1을 각각 곱한다.
+
+  return answer - 1;
+}
